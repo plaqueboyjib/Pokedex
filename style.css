@@ -1,3 +1,12 @@
+@keyframes shiny {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
 body {
     font-family: Helvetica, sans-serif; /* Fallback to sans-serif if Helvetica is not available */
     background-color: #252627;
@@ -5,15 +14,13 @@ body {
     padding: 20px;
 }
 
-h1 {
-    color: rgb(255, 255, 255); /* Title color */
-    margin: 0; /* Remove default margin */
-}
-
-.header {
+.header h1 {
+    font-size: 36px; /* Adjust the font size as needed */
+    font-weight: bold;
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center the content of the header */
+    color: #ffffff;
 }
 
 .title {
@@ -27,12 +34,26 @@ h1 {
     font-size: 30px;
 }
 
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for mobile */
+        margin: 10px 0; /* Adjust margins for better spacing */
+    }
+}
+
 .pokemon-logo {
     position: absolute; /* Allow the logo to be positioned independently */
     top: 23px;
     left: 27px; /* Position it on the left */
-    width: 200px; /* Set a fixed width for the logo */
+    width: 75px; /* Set a fixed width for the logo */
     height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 975px) {
+    .pokemon-logo {
+        width: 65px; /* Smaller size for mobile */
+        margin-right: 10px; /* Adjust spacing */
+    }
 }
 
 #search-input {
@@ -44,6 +65,14 @@ h1 {
     margin: 10px auto; /* Center it horizontally and add vertical spacing */
     background-color: #252627; /* Match the background color */
     color: white; /* Set the text color to white */
+}
+
+@media (max-width: 800px) {
+    #search-input {
+        width: 150px; /* Smaller width for mobile */
+        padding: 8px; /* Adjust padding */
+        margin: 10px auto; /* Less vertical spacing */
+    }
 }
 
 #pokemon-container {
@@ -59,19 +88,20 @@ h1 {
     position: relative; /* For positioning the type indicator */
     border-radius: 15px;
     padding: 40px; /* You may want to reduce this to make the card size more constant */
-    margin: 12.5px;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    box-shadow: 0 0px 0px rgba(255, 255, 255, 0.2);
     color: white; /* Text color for better visibility */
     text-align: left; /* Align text to the left */
     width: 150px; /* Fixed width for cards */
     height: 70px; /* Fixed height for cards */
     transition: transform 0.2s ease; /* Smooth transition for transform */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Hover effect */
 .pokemon-card:hover {
-    transform: translateY(-7px); /* Move the card up slightly */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a stronger shadow effect */
+    transform: scale(0.95);
+    transition: transform 0.2s;
 }
 
 .pokemon-id {
@@ -84,6 +114,12 @@ h1 {
     padding: 2px 5px; /* Padding around the ID */
     border-radius: 5px; /* Rounded corners for the background */
     font-weight: bold;
+    background: linear-gradient(90deg, rgba(255, 182, 193, 0.8), rgba(255, 228, 196, 0.8), rgba(255, 255, 224, 0.8), rgba(224, 255, 255, 0.8), rgba(204, 204, 255, 0.8), rgba(255, 204, 255, 0.8), rgba(255, 224, 189, 0.8)); /* Pastel rainbow effect */
+    background-size: 200% 100%; /* Make the gradient wider for animation */
+    color: transparent; /* Hide the text color */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Clip background to text */
+    animation: shiny 2.5s infinite; /* Apply animation */
 }
 
 .pokemon-sprite {
@@ -103,7 +139,12 @@ h1 {
     font-weight: bold;
     z-index: 1; /* Ensure the name is above other elements */
     max-width: 60%;
-
+    background: linear-gradient(90deg, rgba(255, 182, 193, 0.7), rgba(255, 228, 196, 0.7), rgba(255, 255, 224, 0.7), rgba(224, 255, 255, 0.7), rgba(204, 204, 255, 0.7), rgba(255, 204, 255, 0.7), rgba(255, 224, 189, 0.7)); /* Pastel rainbow effect */
+    background-size: 200% 100%; /* Make the gradient wider for animation */
+    color: transparent; /* Hide the text color */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Clip background to text */
+    animation: shiny 2.5s infinite; /* Apply animation */
 }
 
 .type-indicator {
