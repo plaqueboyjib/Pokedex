@@ -10,8 +10,7 @@ The Pokédex includes all Pokémon including alternate forms, with:
 - ID numbers
 - Types With corresponding colours
 
-![screenshot](https://github.com/user-attachments/assets/3bb4a1a4-9274-42ca-802b-fedd82593668)
-
+![Image](https://github.com/user-attachments/assets/52e19aa5-29b8-4d7b-b5f3-87d22558903d)
 
 ## Getting Started
 
