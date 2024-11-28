@@ -27,7 +27,7 @@ git clone https://github.com/yourusername/pokemon-card-display.git
 Navigate to the project directory:
 
 ```
-cd pokemon-card-display
+cd pokedex
 ```
 Open the index.html file in your web browser to view the application.
 
