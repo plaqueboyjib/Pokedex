@@ -1,31 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color:   #252627;
+    font-family: Helvetica, sans-serif; /* Fallback to sans-serif if Helvetica is not available */
+    background-color: #252627;
     margin: 0;
     padding: 20px;
-}
-
-.header {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center all items in the header */
-    position: relative; /* Ensure positioning context for absolute elements */
-}
-
-.header .title-wrapper {
-    flex-grow: 1; /* Allow the title wrapper to take up remaining space */
-    text-align: center; /* Center the text inside the wrapper */
-}
-
-.pokemon-logo {
-    width: 100px; /* Set width for the logo */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Space between logo and title */
 }
 
 h1 {
     color: rgb(255, 255, 255); /* Title color */
     margin: 0; /* Remove default margin */
+}
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center the content of the header */
+}
+
+.title {
+    margin: 0; /* Remove default margins */
+    text-align: center; /* Center the text */
+    flex-grow: 1; /* Allow the title to take up remaining space */
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.pokemon-logo {
+    position: absolute; /* Allow the logo to be positioned independently */
+    top: 23px;
+    left: 27px; /* Position it on the left */
+    width: 200px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#search-input {
+    display: block; /* Make it a block element */
+    width: 500px; /* Set a fixed width */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px auto; /* Center it horizontally and add vertical spacing */
+    background-color: #252627; /* Match the background color */
+    color: white; /* Set the text color to white */
 }
 
 #pokemon-container {
@@ -41,12 +59,19 @@ h1 {
     position: relative; /* For positioning the type indicator */
     border-radius: 15px;
     padding: 40px; /* You may want to reduce this to make the card size more constant */
-    margin: 10px;
+    margin: 12.5px;
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
     color: white; /* Text color for better visibility */
     text-align: left; /* Align text to the left */
     width: 150px; /* Fixed width for cards */
     height: 70px; /* Fixed height for cards */
+    transition: transform 0.2s ease; /* Smooth transition for transform */
+}
+
+/* Hover effect */
+.pokemon-card:hover {
+    transform: translateY(-7px); /* Move the card up slightly */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add a stronger shadow effect */
 }
 
 .pokemon-id {
@@ -98,11 +123,3 @@ h1 {
     margin-top: 10px; /* Space between name and types */
 }
 
-#search-input {
-    display: block; /* Make it a block element */
-    width: 200px; /* Set a fixed width */
-    padding: 10px; /* Padding inside the input */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    margin: 20px auto; /* Center it horizontally and add vertical spacing */
-}
