@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:   #252627;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center all items in the header */
+    position: relative; /* Ensure positioning context for absolute elements */
+}
+
+.header .title-wrapper {
+    flex-grow: 1; /* Allow the title wrapper to take up remaining space */
+    text-align: center; /* Center the text inside the wrapper */
+}
+
+.pokemon-logo {
+    width: 100px; /* Set width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+h1 {
+    color: rgb(255, 255, 255); /* Title color */
+    margin: 0; /* Remove default margin */
+}
+
+#pokemon-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of cards */
+    justify-content: center; /* Centers the cards */
+}
+
+.pokemon-card {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items to the start */
+    position: relative; /* For positioning the type indicator */
+    border-radius: 15px;
+    padding: 40px; /* You may want to reduce this to make the card size more constant */
+    margin: 10px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+    color: white; /* Text color for better visibility */
+    text-align: left; /* Align text to the left */
+    width: 150px; /* Fixed width for cards */
+    height: 70px; /* Fixed height for cards */
+}
+
+.pokemon-id {
+    position: absolute; /* Position the ID absolutely within the card */
+    top: 13px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    font-size: 14px; /* Font size for the ID */
+    color: hsla(0, 0%, 100%, 0.996); /* Text color (adjust as needed) */
+    background-color: rgba(255, 255, 255, 0); /* Optional: semi-transparent background for better visibility */
+    padding: 2px 5px; /* Padding around the ID */
+    border-radius: 5px; /* Rounded corners for the background */
+    font-weight: bold;
+}
+
+.pokemon-sprite {
+    position: absolute;
+    top: 35px;
+    right: 8px;
+    width: 110px; /* Adjust width of the image */
+    height: 110px; /* Adjust height of the image */
+    margin-left: 10px; /* Add some space between the image and text */
+}
+
+.pokemon-name {
+    position: absolute; /* Position the name absolutely within the card */
+    top: 13px; /* Distance from the top */
+    left: 15px; /* Distance from the left */
+    font-size: 15px;
+    font-weight: bold;
+    z-index: 1; /* Ensure the name is above other elements */
+    max-width: 60%;
+
+}
+
+.type-indicator {
+    padding: 3px 5px;
+    border-radius: 15px; /* Rounded corners */
+    margin: 0 2px; /* Space between type indicators */
+    color: white; /* Text color */
+    font-size: 9px; /* Font size for type text */
+}
+
+.type-container {
+    position: absolute; /* Position the type container absolutely within the card */
+    bottom: 10px; /* Distance from the bottom */
+    left: 10px; /* Distance from the left */
+    display: flex;
+    justify-content: flex-start; /* Align types to the left */
+    margin-top: 10px; /* Space between name and types */
+}
+
+#search-input {
+    display: block; /* Make it a block element */
+    width: 200px; /* Set a fixed width */
+    padding: 10px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    margin: 20px auto; /* Center it horizontally and add vertical spacing */
+}
