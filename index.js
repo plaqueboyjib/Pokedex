@@ -62,7 +62,7 @@ function getGradientByTypes(types) {
     if (types.length === 2) {
         const color1 = getColorByType(types[0].type.name);
         const color2 = getColorByType(types[1].type.name);
-        return `linear-gradient(to top right, ${color1}, ${color2})`; // Gradient between two colors
+        return `linear-gradient(to top left, ${color1}, ${color2})`; // Gradient between two colors
     } else {
         return getGradientByType(types[0].type.name); // Single type gradient
     }
