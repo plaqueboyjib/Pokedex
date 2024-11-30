@@ -1,16 +1,3 @@
-// Function to lighten a hex color
-function lightenColor(hex, percent) {
-    let r = parseInt(hex.slice(1, 3), 16);
-    let g = parseInt(hex.slice(3, 5), 16);
-    let b = parseInt(hex.slice(5, 7), 16);
-
-    r = Math.min(255, Math.floor(r + (255 - r) * (percent / 100)));
-    g = Math.min(255, Math.floor(g + (255 - g) * (percent / 100)));
-    b = Math.min(255, Math.floor(b + (255 - b) * (percent / 100)));
-
-    return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
-}
-
 // Function to fetch Pokémon data
 async function fetchPokemonData() {
     const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1350'); // Fetch first 1350 Pokémon
@@ -163,6 +150,19 @@ function getColorByType(type) {
         default:
             return '#A8A8A8'; // Default color for unknown types
     }
+}
+
+// Function to lighten a hex color
+function lightenColor(hex, percent) {
+    let r = parseInt(hex.slice(1, 3), 16);
+    let g = parseInt(hex.slice(3, 5), 16);
+    let b = parseInt(hex.slice(5, 7), 16);
+
+    r = Math.min(255, Math.floor(r + (255 - r) * (percent / 100)));
+    g = Math.min(255, Math.floor(g + (255 - g) * (percent / 100)));
+    b = Math.min(255, Math.floor(b + (255 - b) * (percent / 100)));
+
+    return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
 }
 
 // Event listener for DOMContentLoaded
