@@ -8,39 +8,32 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif; /* Fallback to sans-serif if Helvetica is not available */
+    font-family: monospace, sans-serif; /* Fallback to sans-serif if Helvetica is not available */
     background-color: #252627;
     margin: 0;
     padding: 20px;
 }
 
+/* Header Styles */
 .header h1 {
-    font-size: 36px; /* Adjust the font size as needed */
-    font-weight: bold;
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center the content of the header */
+    font-size: 36px; /* Adjust the font size as needed */
+    font-weight: bold;
     color: #ffffff;
+    margin: 25; /* Remove default margins */    text-transform: uppercase; /* Make the title uppercase */
+    letter-spacing: 2px; /* Add spacing between letters */
 }
 
-.title {
-    margin: 0; /* Remove default margins */
-    text-align: center; /* Center the text */
-    flex-grow: 1; /* Allow the title to take up remaining space */
-}
-
-h1 {
-    color: #ffffff;
-    font-size: 30px;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     h1 {
-        font-size: 1.5em; /* Smaller font size for mobile */
+        font-size: 10px; /* Smaller font size for mobile */
         margin: 10px 0; /* Adjust margins for better spacing */
     }
 }
 
+/* Pokemon Logo Styles */
 .pokemon-logo {
     position: absolute; /* Allow the logo to be positioned independently */
     top: 23px;
@@ -56,13 +49,14 @@ h1 {
     }
 }
 
+/* Search Input Styles */
 #search-input {
     display: block; /* Make it a block element */
-    width: 500px; /* Set a fixed width */
-    padding: 10px; /* Padding inside the input */
+    width: 250px; /* Set a fixed width */
+    padding: 12.5px; /* Padding inside the input */
     border: 1px solid #ccc; /* Light gray border */
-    border-radius: 10px; /* Rounded corners */
-    margin: 10px auto; /* Center it horizontally and add vertical spacing */
+    border-radius: 50px; /* Rounded corners */
+    margin: 25px auto; /* Center it horizontally and add vertical spacing */
     background-color: #252627; /* Match the background color */
     color: white; /* Set the text color to white */
 }
@@ -71,16 +65,17 @@ h1 {
     #search-input {
         width: 150px; /* Smaller width for mobile */
         padding: 8px; /* Adjust padding */
-        margin: 10px auto; /* Less vertical spacing */
     }
 }
 
+/* Pokemon Container Styles */
 #pokemon-container {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping of cards */
     justify-content: center; /* Centers the cards */
 }
 
+/* Pokemon Card Styles */
 .pokemon-card {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space between items */
@@ -89,32 +84,30 @@ h1 {
     border-radius: 15px;
     padding: 40px; /* You may want to reduce this to make the card size more constant */
     margin: 8px;
-    box-shadow: 0 0px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: white; /* Text color for better visibility */
     text-align: left; /* Align text to the left */
     width: 150px; /* Fixed width for cards */
     height: 70px; /* Fixed height for cards */
     transition: transform 0.2s ease; /* Smooth transition for transform */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Hover effect */
 .pokemon-card:hover {
     transform: scale(0.95);
-    transition: transform 0.2s;
 }
 
+/* Pokemon ID Styles */
 .pokemon-id {
     position: absolute; /* Position the ID absolutely within the card */
     top: 13px; /* Distance from the top */
     right: 10px; /* Distance from the right */
     font-size: 14px; /* Font size for the ID */
-    color: hsla(0, 0%, 100%, 0.996); /* Text color (adjust as needed) */
-    background-color: rgba(255, 255, 255, 0); /* Optional: semi-transparent background for better visibility */
+    color: hsla(0, 0%, 100%, 0.996); /* Text color */
     padding: 2px 5px; /* Padding around the ID */
     border-radius: 5px; /* Rounded corners for the background */
     font-weight: bold;
-    background: linear-gradient(90deg, rgba(255, 182, 193, 0.8), rgba(255, 228, 196, 0.8), rgba(255, 255, 224, 0.8), rgba(224, 255, 255, 0.8), rgba(204, 204, 255, 0.8), rgba(255, 204, 255, 0.8), rgba(255, 224, 189, 0.8)); /* Pastel rainbow effect */
+    background: linear-gradient(90deg, rgba(255, 182, 193, 0.8), rgba(255, 228, 196, 0.8), rgba(255, 255, 224 , 0.8), rgba(224, 255, 255, 0.8), rgba(204, 204, 255, 0.8), rgba(255, 204, 255, 0.8), rgba(255, 224, 189, 0.8)); /* Pastel rainbow effect */
     background-size: 200% 100%; /* Make the gradient wider for animation */
     color: transparent; /* Hide the text color */
     -webkit-background-clip: text; /* Clip background to text */
@@ -122,6 +115,7 @@ h1 {
     animation: shiny 2.5s infinite; /* Apply animation */
 }
 
+/* Pokemon Sprite Styles */
 .pokemon-sprite {
     position: absolute;
     top: 35px;
@@ -131,6 +125,7 @@ h1 {
     margin-left: 10px; /* Add some space between the image and text */
 }
 
+/* Pokemon Name Styles */
 .pokemon-name {
     position: absolute; /* Position the name absolutely within the card */
     top: 13px; /* Distance from the top */
@@ -144,9 +139,10 @@ h1 {
     color: transparent; /* Hide the text color */
     -webkit-background-clip: text; /* Clip background to text */
     background-clip: text; /* Clip background to text */
-    animation: shiny 2.5s infinite; /* Apply animation */
+    animation: shiny 3s infinite; /* Apply animation */
 }
 
+/* Type Indicator Styles */
 .type-indicator {
     padding: 3px 5px;
     border-radius: 15px; /* Rounded corners */
@@ -155,6 +151,7 @@ h1 {
     font-size: 9px; /* Font size for type text */
 }
 
+/* Type Container Styles */
 .type-container {
     position: absolute; /* Position the type container absolutely within the card */
     bottom: 10px; /* Distance from the bottom */
