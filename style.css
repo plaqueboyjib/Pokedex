@@ -105,7 +105,7 @@ body {
 
 /* Pokemon ID Styles */
 .pokemon-id {
-    font-family: Helvetica, sans-serif; /* Fallback to sans-serif if Helvetica is not available */
+    font-family: sans-serif;
     position: absolute; /* Position the ID absolutely within the card */
     top: 13px; /* Distance from the top */
     right: 10px; /* Distance from the right */
@@ -128,7 +128,7 @@ body {
 
 /* Pokemon Name Styles */
 .pokemon-name {
-    font-family: Helvetica, sans-serif; /* Fallback to sans-serif if Helvetica is not available */
+    font-family: sans-serif;
     position: absolute; /* Position the name absolutely within the card */
     top: 13px; /* Distance from the top */
     left: 15px; /* Distance from the left */
@@ -140,11 +140,13 @@ body {
 
 /* Type Indicator Styles */
 .type-indicator {
+    font-family: sans-serif; /* Fallback to sans-serif if Helvetica is not available */
     padding: 3px 5px;
     border-radius: 15px; /* Rounded corners */
     margin: 0 2px; /* Space between type indicators */
     color: white; /* Text color */
     font-size: 9px; /* Font size for type text */
+
 }
 
 /* Type Container Styles */
