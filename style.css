@@ -24,6 +24,12 @@ body {
     color: #ffffff;
     margin: 25; /* Remove default margins */    text-transform: uppercase; /* Make the title uppercase */
     letter-spacing: 2px; /* Add spacing between letters */
+    background: linear-gradient(90deg, rgba(255, 182, 193, 0.8), rgba(255, 228, 196, 0.8), rgba(255, 255, 224 , 0.8), rgba(224, 255, 255, 0.8), rgba(204, 204, 255, 0.8), rgba(255, 204, 255, 0.8), rgba(255, 224, 189, 0.8)); /* Pastel rainbow effect */
+    background-size: 200% 100%; /* Make the gradient wider for animation */
+    color: transparent; /* Hide the text color */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Clip background to text */
+    animation: shiny 5s infinite; /* Apply animation */
 }
 
 @media (max-width: 1000px) {
@@ -107,12 +113,6 @@ body {
     padding: 2px 5px; /* Padding around the ID */
     border-radius: 5px; /* Rounded corners for the background */
     font-weight: bold;
-    background: linear-gradient(90deg, rgba(255, 182, 193, 0.8), rgba(255, 228, 196, 0.8), rgba(255, 255, 224 , 0.8), rgba(224, 255, 255, 0.8), rgba(204, 204, 255, 0.8), rgba(255, 204, 255, 0.8), rgba(255, 224, 189, 0.8)); /* Pastel rainbow effect */
-    background-size: 200% 100%; /* Make the gradient wider for animation */
-    color: transparent; /* Hide the text color */
-    -webkit-background-clip: text; /* Clip background to text */
-    background-clip: text; /* Clip background to text */
-    animation: shiny 2.5s infinite; /* Apply animation */
 }
 
 /* Pokemon Sprite Styles */
@@ -134,12 +134,6 @@ body {
     font-weight: bold;
     z-index: 1; /* Ensure the name is above other elements */
     max-width: 60%;
-    background: linear-gradient(90deg, rgba(255, 182, 193, 0.7), rgba(255, 228, 196, 0.7), rgba(255, 255, 224, 0.7), rgba(224, 255, 255, 0.7), rgba(204, 204, 255, 0.7), rgba(255, 204, 255, 0.7), rgba(255, 224, 189, 0.7)); /* Pastel rainbow effect */
-    background-size: 200% 100%; /* Make the gradient wider for animation */
-    color: transparent; /* Hide the text color */
-    -webkit-background-clip: text; /* Clip background to text */
-    background-clip: text; /* Clip background to text */
-    animation: shiny 3s infinite; /* Apply animation */
 }
 
 /* Type Indicator Styles */
