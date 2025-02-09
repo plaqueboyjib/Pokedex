@@ -1,4 +1,4 @@
-# Jibzh' Pokédex [![Maintainability](https://api.codeclimate.com/v1/badges/fb4793225019f84f2383/maintainability)](https://codeclimate.com/github/jibzh/pokedex/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/fb4793225019f84f2383/test_coverage)](https://codeclimate.com/github/jibzh/pokedex/test_coverage) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jibzh/pokedex/issues)
+# Jibraeels Pokédex [![Maintainability](https://api.codeclimate.com/v1/badges/fb4793225019f84f2383/maintainability)](https://codeclimate.com/github/jibzh/pokedex/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/fb4793225019f84f2383/test_coverage)](https://codeclimate.com/github/jibzh/pokedex/test_coverage) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/jibzh/pokedex/issues)
 
 A Pokédex made for fun with HMTL, CSS and Javascript
 
