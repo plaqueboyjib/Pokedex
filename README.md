@@ -2,7 +2,7 @@
 
 A Pokédex made for fun with HMTL, CSS and Javascript
 
-View live at: https://jibzh.github.io/pokedex
+View live at: https://plaqueboyjib.github.io/Pokedex/
 
 The Pokédex includes all Pokémon including alternate forms, with:
 
