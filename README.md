@@ -19,7 +19,7 @@ The Pokédex includes all Pokémon including alternate forms, with:
 Clone the repository:
 
 ```
-git clone https://github.com/yourusername/pokemon-card-display.git
+git clone https://github.com/yourusername/Pokedex
 ```
 
 ### Running the application
@@ -27,14 +27,14 @@ git clone https://github.com/yourusername/pokemon-card-display.git
 Navigate to the project directory:
 
 ```
-cd pokedex
+cd Pokedex
 ```
 Open the index.html file in your web browser to view the application.
 
 ### Key files and folders
 
 ```
-/pokemon-card-display
+/Pokedex
 │
 ├── index.html           # Main HTML file for the application
 ├── style.css            # CSS file containing styles for the application
